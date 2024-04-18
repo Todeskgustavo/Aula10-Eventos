@@ -30,3 +30,15 @@ function adicionaTexto(){
 function mudou(){
     console.log('Mudou');
 }
+
+function validarCampo(campo){
+    if(campo.value.trim() === '') {
+        alert('Por favor, preencha o campo ' + campo.id);
+        campo.focus();
+    }
+}
+
+function teclaPressionada(){
+    let input = document.getElementById("campoTexto").value;
+    console.log(input);
+}

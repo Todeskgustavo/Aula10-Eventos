@@ -10,7 +10,7 @@
         }
     </style>
 </head>
-<body>
+<body onresize="console.log('Houve um redimensionamento de tela')">
     <h1>Aprendendo Javascript</h1>
     <h2>Eventos Javascript</h2>
     <p id="texto"></p>
@@ -23,6 +23,17 @@
         <option value="3">Valor 3</option>        
         <option value="4">Valor 4</option>             
     </select>
+    <br><br>
+
+    <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" onblur="validarCampo(this)">
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" onblur="validarCampo(this)">
+        <br><br>
+        <button type="submit">Enviar</button>
+    </form>
 
     <br><br>
 
@@ -30,7 +41,7 @@
 
     <br>
 
-    <input id="campoTexto" style="padding: 80px; font-size: 40px;" type="text" placeholder="Digite alguma coisa" value="Já vem com texto">
+    <input onkeydown="teclaPressionada()" id="campoTexto" style="padding: 80px; font-size: 40px;" type="text" placeholder="Digite alguma coisa">
     <script src="javascript.js"></script>    
 </body>
 </html>
